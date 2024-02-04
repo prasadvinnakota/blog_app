@@ -3,8 +3,12 @@ import { Navbar, TextInput, Button } from 'flowbite-react'
 import {Link} from "react-router-dom"
 import {AiOutlineSearch} from "react-icons/ai"
 import {FaMoon} from "react-icons/fa"
+import { useLocation } from 'react-router-dom'
 
 const Header = () => {
+
+  const path = useLocation().pathname
+  console.log(path)
   return (
     <Navbar className="border-b-2">
     <Link to="/" className=" self-center text-sm sm:text-xl font-semibold dark:text-white">
